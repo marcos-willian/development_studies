@@ -1,0 +1,28 @@
+{
+    "id": "8054DCFE",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1627606658283.0,
+    "source_on_save": false,
+    "relative_order": 6,
+    "properties": {
+        "id": "c7d5e776075a445eace41df4280e2523",
+        "name": "bayesTreino",
+        "title": "bayesTreino",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 2847252250920,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1627606658283,
+    "read_only": false,
+    "read_only_alternatives": []
+}

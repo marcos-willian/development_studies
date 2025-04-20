@@ -1,0 +1,22 @@
+rm(list = ls())
+
+# heart = read.table("heart.dat", sep = " ", dec = ".")
+# classe = ifelse( heart[complete.cases(heart), 14] == "1", 0, 1)
+# dataSet = heart[complete.cases(heart), 1:13]
+
+housing = read.table("housing.data", sep = " ", dec = ".")
+classe = ifelse( heart[complete.cases(heart), 14] == "1", 0, 1)
+dataSet = heart[complete.cases(heart), 1:13]
+
+
+
+
+
+
+for (i in 1:ncol(dataSet)) {
+  minC <- min(dataSet[, i])
+  maxC <- max(dataSet[, i])
+  for (j in 1:nrow(dataSet)) {
+    dataSet[j, i] = (dataSet[j, i] - minC)/(maxC - minC)
+  }
+}

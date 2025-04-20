@@ -1,0 +1,23 @@
+rm(list =  ls())
+library("kernlab")
+xc1 = replicate(2, rnorm(50) + 4)
+xc2 = replicate(2, rnorm(50) + 2)
+xin = rbind(xc1,xc2)
+yin = rbind(matrix(-1,50,1), matrix(1,50,1))
+plot(xc1, col = "red", type = "p", xlim = c(0,6), ylim = c(0,6))
+points(xc2, col = "blue")
+
+svm <- ksvm(xin, yin, type = "C-bsvc", kernel = "rbfdot", kpar = list(sigma = 0.1), C = 10)
+yhat = predict(svm,xin, type = "response")
+a = alpha(svm)
+ai = SVindex(svm)
+nsvec = svm@nSV
+points(xin[ai,], col = "green")
+
+margpoit = xin[ai,]
+margclass = yin[ai,]
+y = 0
+rbfkernel = rbfdot(sigma = 0.1)
+for(i in 1:nsvec){
+  y = y + a[[1]][i]*margclass[i]*rbfkernel(margpoit[i,],xin[1,])
+}

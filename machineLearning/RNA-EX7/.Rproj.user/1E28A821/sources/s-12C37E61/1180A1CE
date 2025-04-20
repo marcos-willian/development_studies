@@ -1,0 +1,28 @@
+{
+    "id": "1180A1CE",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1639500658764.0,
+    "source_on_save": false,
+    "relative_order": 5,
+    "properties": {
+        "id": "566242ce09b24c468b439107692c6102",
+        "name": "modRBF",
+        "title": "modRBF",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 866100275219151440,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1639500658764,
+    "read_only": false,
+    "read_only_alternatives": []
+}

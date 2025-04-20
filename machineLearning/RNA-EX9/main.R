@@ -1,0 +1,69 @@
+rm(list = ls())
+source('trainMLP.R')
+source('YMLP.R')
+
+MSE <- function(yTest, yhat){
+  sum = 0
+  N = dim(yTest)[1]
+  for(i in 1:N){
+    err = t(as.matrix(yTest[i,] - yhat[i,]))
+    sum = sum + ((err) %*% t(err))
+  }
+  return(sum/N)
+}
+
+xtrain = as.matrix(seq(from = 0, to = 2*pi, length.out = 45), ncol = 1)
+ytrain = sin(xtrain) + runif(45, min = -0.1, max = 0.1)
+
+xtest = as.matrix(seq(from = 0, to = 2*pi, by = 0.01), ncol = 1)
+ytest = sin(xtest)
+
+plot(xtrain,
+     sin(xtrain),
+     type = 'l',
+     col = 'red',
+     lty = 2,
+     xlab = 'x',
+     ylab = 'y',
+     main = 'Dados de treinamento')
+points(xtrain, ytrain, pch = 19, col = 'blue')
+
+errTest = NULL
+errTrain = NULL
+min = 1000
+
+for(i in 1:5){
+  modelo = trainMLP(xtrain, ytrain, 100, 5000, 0.005, T, F, 0.01)
+  errTrain[i] =  modelo$errTrain[modelo$numIt]
+  if(min > modelo$errTrain[modelo$numIt]){
+    min = modelo$errTrain[modelo$numIt]
+    modeloErrMin = modelo
+  }
+  
+  yhat = YMLP(xtest, modelo)
+  errTest[i] = MSE(ytest, yhat)
+}
+
+plot(modeloErrMin$errTrain, 
+     type = 'l',
+     main = 'Erro do menor treinamento',
+     xlab = 'Iteração',
+     ylab = 'Erro quadrático')
+
+plot(xtest,
+     ytest,
+     type = 'l',
+     xlab = 'x',
+     ylab = 'y',
+     main =  'Dados de teste',
+     col = 'red')
+lines(xtest,
+     YMLP(xtest, modeloErrMin),
+     type = 'l',
+     col = 'blue')
+
+print(mean(errTrain))
+print(sd(errTrain))
+print(mean(errTest))
+print(sd(errTest))
+

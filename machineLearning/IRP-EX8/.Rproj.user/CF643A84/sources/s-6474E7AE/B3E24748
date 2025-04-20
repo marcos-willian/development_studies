@@ -1,0 +1,28 @@
+{
+    "id": "B3E24748",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1627594415047.0,
+    "source_on_save": false,
+    "relative_order": 5,
+    "properties": {
+        "id": "8e911efeea9c4a94869a23e0383ec974",
+        "name": "heartTreino",
+        "title": "heartTreino",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 19422065456840805,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1627594415047,
+    "read_only": false,
+    "read_only_alternatives": []
+}

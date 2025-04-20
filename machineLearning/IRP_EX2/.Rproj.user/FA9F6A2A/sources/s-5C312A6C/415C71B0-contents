@@ -1,0 +1,49 @@
+rm( list = ls())
+#adiciona bibliotecas e codigos necessários
+library("jpeg")
+library("imager")
+source("templateMatching.R")
+source("metricas.R")
+
+#Tratamento das imagens
+#importa figruras e transforma em escala de cinza
+placas = grayscale(load.image("placas.jpg"), method = "Luma", drop = TRUE)
+placa1 = grayscale(load.image("placa_1.jpg"), method = "Luma", drop = TRUE)
+placa2 = grayscale(load.image("placa_2.jpg"), method = "Luma", drop = TRUE)
+plot(placas)
+plot(placa1)
+plot(placa2)
+#Seleciona apenas os valores excluindo a profundidade e escala de cor
+placas = placas[,,1,1] 
+placa1 = placa1[,,1,1]
+placa2 = placa2[,,1,1]
+# Inverte figura do avesso
+placas = t(apply(placas, 1, rev)) 
+placa1 = t(apply(placa1, 1, rev))
+placa2 = t(apply(placa2, 1, rev))
+
+#Procura placa 1
+resultado = templateMatching(placa1,placas)
+matrizDist = resultado[[1]]
+posicaoPlaca1 = resultado[[2]]
+contour(matrizDist)#Contorno
+redDegree = colorRampPalette(c("red","yellow"))
+image(matrizDist, col = redDegree(100))
+
+
+
+
+#Procura placa 2
+resultado = templateMatching(placa2,placas)
+matrizDist = resultado[[1]]
+posicaoPlaca2 = resultado[[2]]
+contour(matrizDist)
+image(matrizDist, col = redDegree(5))
+
+#Duas placas na mesma figura
+#Mostra resultado depois das adequações
+escalaCinza = rev(gray(100:1/100)) #Vetor de 100 valores de cinza diferente
+escalaCinza[100] = "#FF0000"#Coloca vermelho para a cor referente a branca
+#dividir por 1.1 escurece a imagem e da realce para a cor vermelha
+placas = identificaPlaca(placas/1.1, dim(placa1), posicaoPlaca1)
+image(identificaPlaca(placas, dim(placa2), posicaoPlaca2),col = escalaCinza)

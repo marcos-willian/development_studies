@@ -1,0 +1,11 @@
+var E = ([Int] []);
+  fun rec rev ([Int] s1, [Int] s2): [Int] =
+    if ise(s1) then
+      s2
+    else {
+      var h = hd(s1);
+      var t = tl(s1);
+      rev(t, h::s2)
+    };
+  rev(1::2::3::E, E)
+

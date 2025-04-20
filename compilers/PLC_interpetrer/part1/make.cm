@@ -1,0 +1,9 @@
+(*Open the SML interpreter and run: CM.make "make.cm"; --- DOESN'T WORK'*)
+Group is
+
+$/basis.cm
+$/ml-yacc-lib.cm
+
+PlcParser.yacc
+PlcLexer.lex
+Parse.sml

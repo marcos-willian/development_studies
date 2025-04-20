@@ -1,0 +1,22 @@
+rm(list = ls())
+
+x = seq(-1, 1, by = 0.1)
+y = seq(-1, 1, by = 0.1)
+
+grid = expand.grid(x, y)
+
+circle <- function(x, y) {
+  return(sqrt(x^2 + y^2))
+}
+degrau <- function(x, limiar){
+  as.numeric(x >= limiar)
+}
+raio = 0.6
+classe = as.factor(circle(grid$Var1, grid$Var2)>raio)
+plot(grid, col = classe)
+
+H =  cbind(degrau((-(grid$Var1^2 + grid$Var2^2)), limiar = -raio^2))
+
+png("IMG/Linearização.png")
+plot(H, col = classe, main = "Linearização", xlab = "Amostra", ylab = "Saída")
+dev.off()

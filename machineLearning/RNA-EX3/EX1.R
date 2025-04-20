@@ -1,0 +1,107 @@
+rm(list =  ls())
+
+#Vamos usar o adline com uma entrada constante
+treinaAdaline <- function(x, y, passo, tolerancia, maxEpocas, constInput){
+  # constInput é se usa ou não uma entrada constante
+  N = dim(x)[1]
+  n = dim(x)[2]
+  
+  if(constInput){
+    w = as.matrix(runif(n + 1) -0.5)
+    x = cbind(1, x)
+  }  else{
+    w = as.matrix(runif(n) -0.5)
+  }
+  
+  epocaAtual = 0
+  erroEpoca = 1000
+  erroPorEpoca = c()
+  while(epocaAtual < maxEpocas && erroEpoca > tolerancia){
+    erroAcumulado2 = 0
+    xRand = sample(N)
+    for(i in xRand){
+      yModelo = x[i,] %*% w
+      
+      erro = (y[i] - yModelo)
+      w = w + as.matrix(c(passo*erro)*(x[i,]))
+      
+      erroAcumulado2 = erroAcumulado2 + erro^2
+    }
+    epocaAtual = epocaAtual + 1
+    erroEpoca = erroAcumulado2/N
+    erroPorEpoca[epocaAtual] = erroEpoca
+  }
+  retlist = list(w = w, erro = erroPorEpoca)
+  return(retlist)
+}
+  
+t = as.matrix(read.table('Ex1_t'))
+x = as.matrix(read.table('Ex1_x'))
+y = as.matrix(read.table('Ex1_y'))
+
+png('IMG/Entradas.png')
+plot(t,
+     x, 
+     pch = 19,
+     type = 'b',
+     col = "blue", 
+     new = T, 
+     main = "Amostras de entrada ",
+     ylab = "")
+points(t,
+       y,
+       type = 'b',
+       col = "red")
+legend(x = "topright",
+       legend = c("Entrada", "Saída"),
+       col = c("blue", "red"),
+       pch = 19,
+       lty = 1,
+       lwd = 3, 
+       bty = "n")
+dev.off()
+
+#treina modelo
+resposta = treinaAdaline(x, y, passo = 0.01, tolerancia = 0.0001, 50, T)
+
+png('IMG/Erro.png')
+plot(resposta$erro,
+     pch = 19,
+     type = 'b',
+     col = "black", 
+     new = T, 
+     main = "Erro de treinamento",
+     ylab = "Erro",
+     xlab = "Epoca")
+dev.off()
+
+#Aumenta a fequencia de amostragem
+tTeste = seq(from = 0.3, to = 6, by = 0.05)
+xTeste = sin(tTeste)
+yTeste = cbind(1, xTeste) %*% resposta$w
+
+png('IMG/Modelo.png')
+plot(tTeste,
+     yTeste, 
+     type = 'b',
+     col = "blue", 
+     new = T, 
+     main = "Avaliação do modelo",
+     ylab = "",
+     xlab = "t",
+     ylim = c(0, 1))
+points(t,
+       y,
+       pch = 19,
+       type = 'b',
+       col = "red")
+legend(x = "topright",
+       legend = c("Saida original", "Resposta do Modelo"),
+       col = c( "red", "blue"),
+       lty = 1,
+       lwd = 3, 
+       bty = "n")
+dev.off()
+
+
+
