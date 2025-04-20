@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MoviesApi</name>
+    </assembly>
+    <members>
+        <member name="M:MoviesApi.Adapters.Driving.Controllers.MovieController.Post(MoviesApi.Core.Domain.Dtos.CreateMovieDto)">
+            <summary>
+            Adiciona um filme ao banco de dados
+            </summary>
+            <param name="movie">Objeto com os campos necessários para criação de um filme</param>
+            <returns>IActionResult</returns>
+            <response code="200">Caso inserção seja feita com sucesso</response>
+            <response code="400">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="T:MoviesApi.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:MoviesApi.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:MoviesApi.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:MoviesApi.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

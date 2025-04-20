@@ -1,0 +1,50 @@
+services:
+  rabbit: 
+    image: rabbitmq:3
+    networks:
+        - bridge
+    healthcheck:
+        test: [ "CMD", "rabbitmqctl", "status"]
+        interval: 5s
+        timeout: 10s
+        retries: 2
+  mysql:
+    image: mysql:9.1.0
+    networks:
+        - bridge
+    environment:
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_DATABASE: restaurantedb
+    healthcheck:
+        test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+        timeout: 5s
+        retries: 10
+    
+
+  restauranteService:
+    depends_on:
+        mysql:
+            condition: service_healthy
+        rabbit:
+            condition: service_healthy
+    image: restaurante_service
+    build: ./RestauranteService
+    ports:
+        - "8080:8080"
+    networks:
+        - bridge
+  intemService:
+    depends_on:
+        rabbit:
+            condition: service_healthy 
+            restart: true
+    image: item_service
+    build: ./ItemService
+    ports:
+        - "8081:8080"
+    networks:
+        - bridge
+
+networks:
+  # The presence of these objects is sufficient to define them
+  bridge: {}

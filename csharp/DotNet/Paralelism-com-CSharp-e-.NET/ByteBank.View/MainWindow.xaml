@@ -1,0 +1,62 @@
+﻿<Window x:Class="ByteBank.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="ByteBank FrontOffice" Height="600" Width="525"
+        WindowStartupLocation="CenterScreen">
+    <DockPanel Margin="10">
+        <!-- Logotipo -->
+        <Image Source="/ByteBank.View;component/Assets/Logo.png"
+               Height="75"
+               DockPanel.Dock="Top"/>
+
+        <!-- Botão para Processamento -->
+        <TextBlock Name="TxtTempo"
+                   DockPanel.Dock="Bottom"
+                   HorizontalAlignment="Right">
+        </TextBlock>
+        
+        <Grid DockPanel.Dock="Bottom">
+
+            <Button Name="BtnCancelar"
+                    Padding="10"
+                    Grid.Column="2"
+                    Click="BtnCancelar_Click" 
+                    IsEnabled="False"
+                    Height="38" Margin="270,0,0,0">
+                Canclear
+            </Button>
+
+            <Button Name="BtnProcessar"
+                    Padding="10"
+                    
+                    Click="BtnProcessar_Click" 
+                    Height="38" Margin="0,0,255,0">
+                    Fazer Processamento
+            </Button>
+
+
+            
+        </Grid>
+
+        <ProgressBar Name="PgrBar"
+                    DockPanel.Dock="Bottom"
+                     Margin="0,0,0,10"
+                     Visibility="Hidden"
+                     Minimum="0"
+                     Maximum="100"
+                     Height="16"
+             ></ProgressBar>
+
+        <!-- Resultado -->
+        <TextBlock DockPanel.Dock="Top">Resultado:</TextBlock>
+        <TextBlock DockPanel.Dock="Top"
+                   Name="TxtProgresso"/>
+        <ListView Name="LstResultados"
+                  Background="Beige"
+                  Margin="0 10">
+        </ListView>
+    </DockPanel>
+</Window>

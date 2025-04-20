@@ -1,0 +1,160 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\marki\\Projects\\study\\DotNet\\restaurante_service\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{352F6D1C-3C95-463B-B432-2EE7B8131249}|Solution Items{352F6D1C-3C95-463B-B432-2EE7B8131249}|C:\\Users\\marki\\Projects\\study\\DotNet\\restaurante_service\\compose.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{352F6D1C-3C95-463B-B432-2EE7B8131249}|Solution Items{352F6D1C-3C95-463B-B432-2EE7B8131249}|solutionrelative:compose.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F7C0D9E-8348-4625-A6AF-9C5A15C3C180}|ItemService\\ItemService.csproj|c:\\users\\marki\\projects\\study\\dotnet\\restaurante_service\\itemservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{1F7C0D9E-8348-4625-A6AF-9C5A15C3C180}|ItemService\\ItemService.csproj|solutionrelative:itemservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A099A8F2-0C69-47EC-835E-C0F2C1990877}|RestauranteService\\RestauranteService.csproj|c:\\users\\marki\\projects\\study\\dotnet\\restaurante_service\\restauranteservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A099A8F2-0C69-47EC-835E-C0F2C1990877}|RestauranteService\\RestauranteService.csproj|solutionrelative:restauranteservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F7C0D9E-8348-4625-A6AF-9C5A15C3C180}|ItemService\\ItemService.csproj|c:\\users\\marki\\projects\\study\\dotnet\\restaurante_service\\itemservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F7C0D9E-8348-4625-A6AF-9C5A15C3C180}|ItemService\\ItemService.csproj|solutionrelative:itemservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F7C0D9E-8348-4625-A6AF-9C5A15C3C180}|ItemService\\ItemService.csproj|c:\\users\\marki\\projects\\study\\dotnet\\restaurante_service\\itemservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1F7C0D9E-8348-4625-A6AF-9C5A15C3C180}|ItemService\\ItemService.csproj|solutionrelative:itemservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A099A8F2-0C69-47EC-835E-C0F2C1990877}|RestauranteService\\RestauranteService.csproj|c:\\users\\marki\\projects\\study\\dotnet\\restaurante_service\\restauranteservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A099A8F2-0C69-47EC-835E-C0F2C1990877}|RestauranteService\\RestauranteService.csproj|solutionrelative:restauranteservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A099A8F2-0C69-47EC-835E-C0F2C1990877}|RestauranteService\\RestauranteService.csproj|c:\\users\\marki\\projects\\study\\dotnet\\restaurante_service\\restauranteservice\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A099A8F2-0C69-47EC-835E-C0F2C1990877}|RestauranteService\\RestauranteService.csproj|solutionrelative:restauranteservice\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A099A8F2-0C69-47EC-835E-C0F2C1990877}|RestauranteService\\RestauranteService.csproj|c:\\users\\marki\\projects\\study\\dotnet\\restaurante_service\\restauranteservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A099A8F2-0C69-47EC-835E-C0F2C1990877}|RestauranteService\\RestauranteService.csproj|solutionrelative:restauranteservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\marki\\Projects\\study\\DotNet\\restaurante_service\\ItemService\\Program.cs",
+              "RelativeDocumentMoniker": "ItemService\\Program.cs",
+              "ToolTip": "C:\\Users\\marki\\Projects\\study\\DotNet\\restaurante_service\\ItemService\\Program.cs",
+              "RelativeToolTip": "ItemService\\Program.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACUAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T02:31:45.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\marki\\Projects\\study\\DotNet\\restaurante_service\\RestauranteService\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "RestauranteService\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\marki\\Projects\\study\\DotNet\\restaurante_service\\RestauranteService\\Properties\\launchSettings.json",
+              "RelativeToolTip": "RestauranteService\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-05T02:26:47.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\marki\\Projects\\study\\DotNet\\restaurante_service\\RestauranteService\\Program.cs",
+              "RelativeDocumentMoniker": "RestauranteService\\Program.cs",
+              "ToolTip": "C:\\Users\\marki\\Projects\\study\\DotNet\\restaurante_service\\RestauranteService\\Program.cs",
+              "RelativeToolTip": "RestauranteService\\Program.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAADAAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T02:24:37.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\marki\\Projects\\study\\DotNet\\restaurante_service\\RestauranteService\\Dockerfile",
+              "RelativeDocumentMoniker": "RestauranteService\\Dockerfile",
+              "ToolTip": "C:\\Users\\marki\\Projects\\study\\DotNet\\restaurante_service\\RestauranteService\\Dockerfile",
+              "RelativeToolTip": "RestauranteService\\Dockerfile",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-11-05T01:56:49.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\marki\\Projects\\study\\DotNet\\restaurante_service\\ItemService\\Dockerfile",
+              "RelativeDocumentMoniker": "ItemService\\Dockerfile",
+              "ToolTip": "C:\\Users\\marki\\Projects\\study\\DotNet\\restaurante_service\\ItemService\\Dockerfile",
+              "RelativeToolTip": "ItemService\\Dockerfile",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-11-05T01:50:38.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\marki\\Projects\\study\\DotNet\\restaurante_service\\ItemService\\appsettings.json",
+              "RelativeDocumentMoniker": "ItemService\\appsettings.json",
+              "ToolTip": "C:\\Users\\marki\\Projects\\study\\DotNet\\restaurante_service\\ItemService\\appsettings.json",
+              "RelativeToolTip": "ItemService\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-05T01:34:29.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\marki\\Projects\\study\\DotNet\\restaurante_service\\RestauranteService\\appsettings.json",
+              "RelativeDocumentMoniker": "RestauranteService\\appsettings.json",
+              "ToolTip": "C:\\Users\\marki\\Projects\\study\\DotNet\\restaurante_service\\RestauranteService\\appsettings.json",
+              "RelativeToolTip": "RestauranteService\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-05T01:34:12.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "compose.yaml",
+              "DocumentMoniker": "C:\\Users\\marki\\Projects\\study\\DotNet\\restaurante_service\\compose.yaml",
+              "RelativeDocumentMoniker": "compose.yaml",
+              "ToolTip": "C:\\Users\\marki\\Projects\\study\\DotNet\\restaurante_service\\compose.yaml",
+              "RelativeToolTip": "compose.yaml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACsAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2024-11-05T01:27:08.12Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
